@@ -1,0 +1,15 @@
+server:
+  port: 2048
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.173.34.153:3721/imnu_open_prod?useSSL=true&serverTimezone=GMT%2B8&zeroDateTimeBehavior=convertToNull
+    username: imnu_open
+    password: imnu_OPEN_1024
+    filters: stat,wall,log4j
+  redis:
+    host: 10.173.34.224
+    port: 6379
+    password: 123456
+socket:
+  port: 4041

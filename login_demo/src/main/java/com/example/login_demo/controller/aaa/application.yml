@@ -1,0 +1,48 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /open
+  #优雅关闭
+  shutdown: graceful
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://59.111.94.192:3721/ranch_iot_test?useSSL=true&serverTimezone=GMT%2B8&zeroDateTimeBehavior=convertToNull
+    username: yfb_test
+    password: BH_yfb_test1024
+  application:
+    name: imnu-open
+  session:
+    store-type: redis
+  main:
+    allow-bean-definition-overriding: true
+  freemarker:
+    suffix: .html
+    #配置扫描jar
+    prefer-file-system-access: false
+    mvc:
+      static-path-pattern: /static/**
+    servlet:
+      multipart:
+        max-file-size: 2000MB
+        max-request-size: 2048MB
+  redis:
+    host: 59.111.92.247
+    port: 6379
+    password: 123456
+    database: 1 # 表示使用redis通统一数据库
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+mybatis-plus:
+  type-handlers-package: com.bohuikeji.frame.ranch.core.handler
+#logging:
+#  config: classpath:xmlconfig/logback-spring.xml
+  mybatis:
+    mapper-locations: classpath:mapping/*Mapping.xml
+    type-aliases-package: com.example.login_demo.entity
+#自定义工具配置项
+tools:
+  oos:
+    write: https://oss.bhynm.com/

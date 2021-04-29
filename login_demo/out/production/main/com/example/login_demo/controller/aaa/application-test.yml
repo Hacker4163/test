@@ -1,0 +1,15 @@
+server:
+  port: 2048
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.173.32.88:3721/ranch_iot_test?useSSL=true&serverTimezone=GMT%2B8&zeroDateTimeBehavior=convertToNull
+    username: yfb_test
+    password: BH_yfb_test1024
+    filters: stat,wall,log4j
+  redis:
+    host: 10.173.34.224
+    port: 6379
+    password: 123456
+socket:
+  port: 4040

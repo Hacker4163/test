@@ -1,0 +1,14 @@
+server:
+  port: 88
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/imnu_open_test?useSSL=true&serverTimezone=GMT%2B8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: qazWSX!1024
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+socket:
+  port: 4041
